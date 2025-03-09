@@ -10,7 +10,7 @@ import cartRouter from './ROUTES/cartRoute.js';
 import addressRouter from './ROUTES/addressRouter.js'
 import orderConfRoute from './ROUTES/orderConfRoute.js'
 import cors from 'cors';
-import path from 'path';
+// import path from 'path';
 
 // // Second
 
@@ -37,14 +37,14 @@ app.use('/api/cart', cartRouter);
 app.use('/api/address', addressRouter); 
 app.use('/api/order', orderConfRoute);
 
-// ✅ Serve Static Files (React Build)
-const __dirname = path.resolve();
-app.use(express.static(path.join(__dirname, 'dist')));
+// // ✅ Serve Static Files (React Build)
+// const __dirname = path.resolve();
+// app.use(express.static(path.join(__dirname, 'dist')));
 
-// ✅ Handle React Routing (if user opens any URL like /cart, /login)
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'dist', 'index.html'));
-});
+// // ✅ Handle React Routing (if user opens any URL like /cart, /login)
+// app.get('*', (req, res) => {
+//     res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+// });
 
 
 app.listen(3000, () => {
