@@ -16,7 +16,7 @@ const AppState = (props) => {
   const [confirmOrder , setConfirmOrder] = useState([]);
   const [PaymentAddr , setPaymentAddr] = useState("");
 
-    const url = 'http://localhost:3000/api/';
+    const url = 'https://rohan-ppix.onrender.com/api/';
 
     const fetchData = async () => {
         try {
