@@ -12,7 +12,7 @@ const ProductDetails = () => {
 
   const fetchData = async () => {
     try {
-      const { data } = await axios.get(`http://localhost:3000/api/product/${id}`, {
+      const { data } = await axios.get(`https://rohan-ppix.onrender.com/api/product/${id}`, {
         headers: { "Content-Type": "application/json" },
         withCredentials: true,
       });
